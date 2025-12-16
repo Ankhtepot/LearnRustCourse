@@ -34,3 +34,18 @@ Remove the underscore. Provide a compiler directive
 to silence the compiler warning about the variable
 being unused.
 */
+const TOUCHDOWN_POINTS: i32 = 6;
+
+fn main() {
+    let season: &str = "Spring";
+    let mut points_scored: i32 = 28;
+    points_scored = 35;
+    let event_time: &str = "06:00";
+    let event_time: i32 = 6;
+
+    println!("Season: {season}\nPoints Scored: {points_scored}\nTouchdown Points: {TOUCHDOWN_POINTS}\
+    \nEvent Time (string): {0}\nEvent Time (integer): {1}\n", event_time, event_time);
+
+    #[allow(unused_variables)]
+    let favorite_beverage: &str = "Water";
+}

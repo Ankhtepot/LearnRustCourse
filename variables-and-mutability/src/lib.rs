@@ -1,0 +1,1 @@
+﻿pub const EXTERNAL_CONSTANT: i32 = 42;
