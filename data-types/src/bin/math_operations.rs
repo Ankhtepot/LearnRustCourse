@@ -5,11 +5,11 @@ fn main() {
     println!("Addition: {addition}, subtraction: {subtraction}, multiplication: {multiplication}");
 
     let floor_division = 5 / 3;
-    println!("{floor_division}");
+    println!("Floor int division: {floor_division}");
 
     let decimal_division = 5.0 / 3.0;
-    println!("{decimal_division}");
+    println!("Decimal division: {decimal_division}");
 
     let remainder = 9 % 2;
-    println!("{remainder}");
+    println!("Modulo: {remainder}");
 }

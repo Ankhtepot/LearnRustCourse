@@ -5,4 +5,7 @@ fn main() {
     println!("Length: {}", apples.len());
 
     let currency_rates: [f64; 0] = [];
+
+    println!("{}", numbers.len());
+    println!("{}", currency_rates.len());
 }
