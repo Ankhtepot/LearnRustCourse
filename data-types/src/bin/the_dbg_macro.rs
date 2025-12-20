@@ -4,6 +4,10 @@ fn main() {
     println!("{}", 5);
     println!("{}", 3.14);
     println!("{}", true);
+    println!("Normal :? format:");
+    println!("{seasons:?}");
+    println!();
+    println!("Pretty :#? format:");
     println!("{seasons:#?}");
 
     dbg!(seasons);
