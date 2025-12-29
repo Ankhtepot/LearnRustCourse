@@ -22,12 +22,11 @@ fn main() {
     // to concatenate the content " and " to the end. Mak sure to
     // include the spaces.
 
-    fn visit_philadelphia(mut trip: String) -> String {
+    fn visit_philadelphia(trip:&mut String) {
         trip.push_str("Philadelphia");
-        trip
     }
 
-    trip = visit_philadelphia(trip);
+    visit_philadelphia(&mut trip);
     trip.push_str(" and ");
 
     // Define a `visit_new_york` function that concatenates the
@@ -35,12 +34,11 @@ fn main() {
     // in `main`. Repeat the previous logic to concatenate " and "
     // to the end of the String.
 
-    fn visit_new_york(mut trip: String) -> String {
+    fn visit_new_york(trip: &mut String) {
         trip.push_str("New York");
-        trip
     }
 
-    trip = visit_new_york(trip);
+    visit_new_york(&mut trip);
     trip.push_str(" and ");
 
     // Define a `visit_boston` function that concatenates the
@@ -48,12 +46,11 @@ fn main() {
     // in `main`. Concatenate a period to the end of the
     // String/sentence.
 
-    fn visit_boston(mut trip: String) -> String {
+    fn visit_boston(trip: &mut String) {
         trip.push_str("Boston");
-        trip
     }
 
-    trip = visit_boston(trip);
+    visit_boston(&mut trip);
 
     // Define a `show_itinerary` function that will print out
     // the final version of the String. Find a way to do so
