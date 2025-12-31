@@ -8,6 +8,7 @@ fn main() {
     print_length(slice_of_three);
 }
 
+// Parameter generalized like this accepts both array slices and references
 fn print_length(slice: &[i32]) {
     println!("{}", slice.len());
 }

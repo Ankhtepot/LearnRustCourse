@@ -12,7 +12,8 @@ fn main() {
 
     let my_slice = &values[..];
     println!("{my_slice:?}");
-
+    // Notice the difference in type, with slice brackets its dynamic array,
+    // reference creates a bounded array
     let my_slice = &values;
     println!("{my_slice:?}");
 }
