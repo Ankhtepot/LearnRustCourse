@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 struct Coffee {
     name: String,
@@ -8,7 +10,7 @@ struct Coffee {
 fn main() {
     let mocha: Coffee = make_coffee(String::from("Mocha"), 4.99, true);
 
-    print!("{:?}", mocha);
+    print!("{:?}\n", mocha);
     print!("{:#?}", mocha);
 }
 

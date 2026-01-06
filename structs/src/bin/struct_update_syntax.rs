@@ -8,7 +8,8 @@ fn main() {
     let mocha = make_coffee(String::from("Mocha"), 4.99, true);
 
     let caramel_macchiato = Coffee {
-        name: mocha.name.clone(),
+        // name: mocha.name.clone(), // Has to be done so mocha won't lose ownership of its name
+        name: String::from("Caramel Macchiato"),
         ..mocha
     };
 

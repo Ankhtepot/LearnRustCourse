@@ -19,4 +19,9 @@ fn main() {
         "My {} this morning cost {}. It is {} that it was hot.",
         beverage.name, beverage.price, beverage.is_hot
     );
+
+    println!(
+        "My {} this morning cost {}. It is {} that it was hot.",
+        beverage.name, beverage.price, beverage.is_hot
+    );
 }

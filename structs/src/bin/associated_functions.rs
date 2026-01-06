@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 struct TaylorSwiftSong {
     title: String,
@@ -13,6 +15,7 @@ impl TaylorSwiftSong {
             duration_secs,
         }
     }
+
 
     fn display_song_info(&self) {
         println!("Title: {}", self.title);

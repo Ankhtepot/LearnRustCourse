@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 struct TaylorSwiftSong {
     title: String,

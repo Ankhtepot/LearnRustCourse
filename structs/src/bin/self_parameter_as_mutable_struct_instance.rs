@@ -1,4 +1,4 @@
-#[derive(Debug)]
+#[derive(Debug, Clone)]
 struct TaylorSwiftSong {
     title: String,
     release_year: u32,
@@ -13,15 +13,29 @@ impl TaylorSwiftSong {
         println!("Duration: {} seconds", self.duration_secs);
     }
 
+    fn print_self(&self) {
+        println!("{:#?}", self);
+    }
+
     // Mutable struct value (self parameter takes ownership, has permission to mutate)
     fn double_length(mut self) {
         self.duration_secs = self.duration_secs * 2;
-        println!("{:#?}", self);
+        self.print_self();
     }
 
     // Immutable reference to the struct instance (no ownership moved)
 
+    fn double_length_ref(&self) {
+        let mut clone: TaylorSwiftSong = self.clone();
+        clone.duration_secs *= 2;
+        clone.print_self();
+    }
+
     // Mutable reference to the struct instance (no ownership moved, have permission to mutate)
+    fn double_length_ref_mut(&mut self) {
+        self.duration_secs *= 2;
+        self.print_self();
+    }
 }
 
 fn main() {
@@ -31,5 +45,10 @@ fn main() {
         duration_secs: 231,
     };
 
-    song.double_length();
+    song.print_self();
+    // song.double_length();
+    song.double_length_ref();
+
+    let mut mut_song = song;
+    mut_song.double_length_ref_mut();
 }

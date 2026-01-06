@@ -13,7 +13,7 @@ impl TaylorSwiftSong {
     }
 
     fn double_length(&mut self) {
-        self.duration_secs = self.duration_secs * 2;
+        self.duration_secs *= 2;
     }
 }
 
