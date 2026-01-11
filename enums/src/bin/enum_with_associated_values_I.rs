@@ -1,3 +1,4 @@
+#![allow(unused)]
 #[derive(Debug)]
 enum PaymentMethodType {
     CreditCard(String),
@@ -8,6 +9,10 @@ enum PaymentMethodType {
 fn main() {
     let visa = PaymentMethodType::CreditCard(String::from("0034-5678-9012-3456"));
     let mastercard = PaymentMethodType::DebitCard(String::from("2532-1298-2093-4800"));
-    println!("{:?}", visa);
-    println!("{:?}", mastercard);
+    println!("Visa: {:?}", visa);
+    println!("Mastercard: {:?}", mastercard);
+
+    let another_visa = PaymentMethodType::CreditCard(String::from("0034-5678-9012-9999"));
+    println!("Another Visa:{:?}", another_visa);
+    println!("Visa: {:?}", visa);
 }

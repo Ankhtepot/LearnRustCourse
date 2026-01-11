@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 enum CardSuit {
     Hearts,
@@ -18,5 +20,5 @@ fn main() {
     println!("{:?}", second_card);
 
     let card_suits = [CardSuit::Hearts, CardSuit::Clubs];
-    let card_suits = (CardSuit::Hearts, CardSuit::Spades)
+    let card_suits = (CardSuit::Hearts, CardSuit::Spades);
 }

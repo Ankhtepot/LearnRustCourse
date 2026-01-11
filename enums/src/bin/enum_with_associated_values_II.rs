@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 enum PaymentMethodType {
     CreditCard(String),
@@ -11,5 +13,9 @@ fn main() {
     my_payment_method =
         PaymentMethodType::PayPal(String::from("bob@email.com"), String::from("password"));
 
-    println!("{:?}", my_payment_method);
+    println!("{:#?}", my_payment_method);
+
+    if let PaymentMethodType::PayPal(email, password) = &my_payment_method {
+        println!("Email: {} | Password: {}", email, password);
+    }
 }

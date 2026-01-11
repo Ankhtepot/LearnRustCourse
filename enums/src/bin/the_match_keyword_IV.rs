@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 #[derive(Debug)]
 enum OnlineOrderStatus {
     Ordered,
@@ -9,6 +11,9 @@ enum OnlineOrderStatus {
 impl OnlineOrderStatus {
     fn check(&self) {
         match self {
+            OnlineOrderStatus::Ordered | OnlineOrderStatus::Packed => {
+                println!("Your item is being prepared")
+            }
             OnlineOrderStatus::Delivered => {
                 println!("Your item has arrived")
             }
@@ -20,5 +25,8 @@ impl OnlineOrderStatus {
 }
 
 fn main() {
+    OnlineOrderStatus::Ordered.check();
+    OnlineOrderStatus::Packed.check();
     OnlineOrderStatus::Shipped.check();
+    OnlineOrderStatus::Delivered.check();
 }
